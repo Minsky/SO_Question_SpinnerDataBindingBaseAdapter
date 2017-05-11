@@ -1,12 +1,17 @@
-# SpinnerTwoWayDataBindingDemo
-This app is to demonstrate how to create two-way data binding for Android spinner utilizing bindingAdapter and InverseBindingAdapter mechanism.
+This project is used in a StackOverflow question. It is about Android data binding of a spinner with a BaseAdapter.
 
-The bound data can be any custom object (not just a String object) as long as the overridden toString() returns the desired text for the spinner.
+The BaseAdapter is necessary here, because there are two views in the spinner list items instead of one. 
+ArrayAdapter is of no use here,  because it requires a single TextView, to do its adapting. 
 
-As the spinner selection is bound to an ObservableField object, when a spinner item is selected, the ObservableField value changes accordingly.
+I use two TextViews here. (In case you want to merge the TextViews into one to make ArrayAdapter work, imagine, the second TextView is an ImageView. :))
 
-On the other hand, when set a new value to the ObservableField, an item in the spinner will be automatically selected as well.
+In its current state the Spinner uses PlanetAdapter, extending BaseAdapter. This tries to bind the Spinner items via Android Data Binding. 
+The problem is, that the first item of the planets is twice in the list, and one planet is missing. Selecting a planet does work, but the drop down
+list of the spinner, always contains the first element twice and the selected element is not visible there.
 
-For better demonstrating the logic, this app uses an edit text view to show/change the value of the above mentioned ObservableField object.
+This project is based on chrislizh's project demonstrating two-way databinding with a spinner for the selected element. 
+(https://github.com/chrislizh/SpinnerTwoWayDataBindingDemo)I only changed the ArrayAdapter, which also affected some methods in BindingPlanet. 
+Technically the binding regarding the selected planet works fine, I tried a classic BaseAdapter using no DataBinding (using findViewById and ViewHolder). 
+The sample code for the classic case is also in the PlanetAdapter, at the end of the file, but commented out, in case you want to see, just switch
+getView und PlaneViewHolderimplementations there.
 
-Additionally, this app also demonstrates how to initialize the spinner selected item and takes care of configuration change.
