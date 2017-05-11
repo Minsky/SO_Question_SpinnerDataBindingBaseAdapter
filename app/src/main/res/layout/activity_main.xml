@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="bindingPlanet"
+            type="au.com.chrisli.spinnertwowaydatabindingdemo.BindingPlanet"/>j
+
+        <variable
+            name="spinAdapterPlanet"
+            type="au.com.chrisli.spinnertwowaydatabindingdemo.PlanetAdapter"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="au.com.chrisli.spinnertwowaydatabindingdemo.MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_info"
+            android:textSize="@dimen/text_size"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spin"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:adapter="@{spinAdapterPlanet}"
+            bind:selectedPlanet="@={bindingPlanet.obvSelectedPlanet_}"
+            />
+
+
+        <EditText
+            android:id="@+id/edit"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spin"
+            android:layout_margin="30dp"
+            android:hint="@string/edit_text_hint"
+            android:onTextChanged="@{bindingPlanet::onEditTextChanged}"
+            android:text="@{bindingPlanet.obvSelectedPlanet_}"
+            android:textSize="@dimen/text_size"/>
+    </RelativeLayout>
+
+
+</layout>
+

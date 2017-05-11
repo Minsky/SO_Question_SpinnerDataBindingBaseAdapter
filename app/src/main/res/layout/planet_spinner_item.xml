@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="planet"
+            type="au.com.chrisli.spinnertwowaydatabindingdemo.Planet">
+        </variable>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/planetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{planet.name}"
+            tools:text="Dummy Planet"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <TextView
+            android:id="@+id/planetDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:text="@{String.valueOf(planet.distance)}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:text="2393.0 km"/>
+    </LinearLayout>
+
+</layout>
+
