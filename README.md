@@ -1,5 +1,13 @@
 This project is used in a StackOverflow question. It is about Android data binding of a spinner with a BaseAdapter.
 
+Steps to reproduce:
+- Compile and Start
+- Open Spinner
+- Selection contains the first element (unnamed plane and distance 0), twice.
+- One planet from the original list is missing.
+
+Explanation
+
 The BaseAdapter is necessary here, because there are two views in the spinner list items instead of one. 
 ArrayAdapter is of no use here,  because it requires a single TextView, to do its adapting. 
 
