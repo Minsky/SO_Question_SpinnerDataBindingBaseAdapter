@@ -64,7 +64,7 @@ public class PlanetAdapter extends BaseAdapter
         else {
             holder = (PlanetViewHolder) convertView.getTag();
         }
-        holder.binding.setPlanet(planets.get(position));e
+        holder.binding.setPlanet(planets.get(position));
         return holder.binding.getRoot();
     }
 
