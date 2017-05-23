@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements IDataChangeListen
 
             PlanetAdapter planetAdapter = new PlanetAdapter(this, R.layout.planet_spinner_item, planets_);
             activityMainBinding_.setSpinAdapterPlanet(planetAdapter);
-            Planet selectedPlanet = savedInstanceState != null ? savedInstanceState.<Planet>getParcelable(BUNDLE_SELECTED_PLANET) : planets_.get(3);//initial selected planet is Earth, 3 is the index of Earth after a blank item inserted
+            Planet selectedPlanet = savedInstanceState != null ?
+                    savedInstanceState.<Planet>getParcelable(BUNDLE_SELECTED_PLANET) : planets_.get(0);//initial selected planet is Earth, 3 is the index of Earth after a blank item inserted
             activityMainBinding_.setBindingPlanet(new BindingPlanet(this, selectedPlanet));
         }
     }

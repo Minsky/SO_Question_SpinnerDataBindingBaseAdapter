@@ -55,25 +55,28 @@ public class PlanetAdapter extends BaseAdapter
 
         if (convertView == null) {
             PlanetSpinnerItemBinding itemBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.planet_spinner_item, parent, false);
-            itemBinding.setPlanet(planets.get(position));
 
             holder = new PlanetViewHolder(itemBinding);
             holder.view = itemBinding.getRoot();
             holder.view.setTag(holder);
+            itemBinding.executePendingBindings();
         }
         else {
             holder = (PlanetViewHolder) convertView.getTag();
         }
-        return holder.view;
+        holder.binding.setPlanet(planets.get(position));e
+        return holder.binding.getRoot();
     }
 
     private static class PlanetViewHolder
     {
         private View view;
+        private PlanetSpinnerItemBinding binding;
 
         PlanetViewHolder(PlanetSpinnerItemBinding binding)
         {
             this.view = binding.getRoot();
+            this.binding = binding;
         }
     }
 
