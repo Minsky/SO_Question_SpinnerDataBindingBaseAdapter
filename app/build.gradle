@@ -23,6 +23,8 @@ android {
     }
 }
 
+// Test änderung
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -31,3 +33,43 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 }
+
+
+
+
+
+
+
+
+
+
+
+// andere lange nänderung
+
+
+// andere lange nänderung
+
+
+// andere lange nänderung
+
+
+
+// andere lange nänderung
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// andere lange nänderung 300

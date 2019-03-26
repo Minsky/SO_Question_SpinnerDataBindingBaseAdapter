@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Chrislizh-SpinnerTwoWayDataBindingDemo-master.iml" filepath="$PROJECT_DIR$/Chrislizh-SpinnerTwoWayDataBindingDemo-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SO_Question_SpinnerDataBindingBaseAdapter.iml" filepath="$PROJECT_DIR$/.idea/SO_Question_SpinnerDataBindingBaseAdapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
