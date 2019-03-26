@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+// Bolle
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -23,7 +25,7 @@ android {
     }
 }
 
-// Test änderung
+// Test änderung 2
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -72,4 +74,4 @@ dependencies {
 
 
 
-// andere lange nänderung 300
+// andere lange nänderung 300 2
